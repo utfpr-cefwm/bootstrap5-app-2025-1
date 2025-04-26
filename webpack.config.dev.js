@@ -7,7 +7,6 @@ module.exports = merge(common, {
   devServer: {
     liveReload: true,
     hot: true,
-    open: true,
     static: ['./'],
   },
 });

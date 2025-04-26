@@ -24,7 +24,27 @@
 
   <body>
 
-    <div class="container">
+    <div class="bg-dark d-flex flex-column" style="min-height: 100vh;">
+
+      <header class="bg-info">
+        Header
+      </header>
+
+      <div class="d-flex flex-column flex-sm-row flex-grow-1"> <!-- "hambúrger" -->
+        <nav class="bg-secondary">
+          Menu
+        </nav>
+        <main class="bg-primary flex-grow-1">
+          Main
+        </main>
+        <aside class="bg-warning">
+          Barra
+        </aside>
+      </div>
+
+      <footer class="bg-danger">
+        Footer
+      </footer>
     </div>
 
     <script src="js/app.js"></script>

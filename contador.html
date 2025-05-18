@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meu projeto com Bootstrap 5</title>
+    <title>Contador</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -12,7 +12,7 @@
 
     <meta property="og:title" content="Homepage do meu projeto com BS5" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://localhost:8080" />
+    <meta property="og:url" content="http://localhost:8080/contador.html" />
     <meta property="og:image" content="/icon.png" />
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -36,10 +36,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Seletor de Cor</a>
+                <a class="nav-link" href="index.html">Seletor de Cor</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contador.html">Contador</a>
+                <a class="nav-link active" aria-current="page" href="#">Contador</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="cronometro.html">Cronômetro</a>
@@ -54,49 +54,40 @@
 
       <main class="flex-grow-1 p-2 text-center">
 
-        <!-- "Jumbotron": -->
         <div class="p-5 mb-4 bg-light rounded-3">
           <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">
-              Seletor de Cor
+              Contador
             </h1>
-            <p class="fs-4">
-              Informe o nome ou código da cor no campo abaixo.
-              A cor de fundo da página será atualizada de acordo.
+            <p class="col-md-8 mx-auto fs-4">
+              Utilize os botões abaixo para registrar uma contagem.
             </p>
           </div>
         </div>
 
-        <!-- "Template" específico do nosso app: -->
-        <form class="container">
-          <div class="row mb-3">
-            <div class="col-12 col-sm-4">
-              <label for="exampleInputEmail1" class="pt-2">
-                Cor escolhida:
-              </label>
-            </div>
-            <div class="col-12 col-sm-8">
-              <input
-                type="text"
-                class="form-control"
-                value="cor inicial"
-                id="input-cor"
-              />
-            </div>
-            <div id="input-cor-help" class="col-12 form-text">
-              Você pode usar qualquer formato de cor válido de HTML/CSS.
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <button type="submit" class="btn btn-primary">
-                <i class="bi bi-eye-fill"></i>
-                Visualizar
-              </button>
-            </div>
-          </div>
-        </form>
-        <!-- Fim do template específico dessa ferramenta. -->
+        <div class="d-flex flex-column d-sm-inline-block mx-sm-auto">
+          <button
+            id="botao-menos"
+            class="order-2 btn btn-danger"
+            type="button"
+          >
+            <i class="bi bi-dash-circle-fill"></i>
+            <!-- menos -->
+            1
+          </button>
+          <button
+            id="botao-mais"
+            class="order-1 btn btn-success"
+            type="button"
+          >
+            <i class="bi bi-plus-circle-fill"></i>
+            <!-- mais -->
+            1
+          </button>
+          <output class="d-block order-3 display-1 fw-bold py-5">
+            0
+          </output>
+        </div>
 
       </main>
 
@@ -106,7 +97,7 @@
     </div>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/contador.js"></script>
 
   </body>
 

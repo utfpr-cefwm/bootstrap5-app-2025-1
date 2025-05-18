@@ -32,3 +32,15 @@ form.addEventListener("submit", function(event) {
   // Impedir a ação padrão deste evento neste elemento HTML:
   return false;
 });
+
+// Código de demonstração para Tarefa 03:
+const promiseRes = fetch('http://localhost:3000/evento', {
+  method: 'GET',
+});
+promiseRes.then(res => {
+  const promiseBody = res.json();
+  promiseBody.then(obj => {
+    console.log(obj.nomeEvento);
+    console.log(obj.data);
+  });
+});

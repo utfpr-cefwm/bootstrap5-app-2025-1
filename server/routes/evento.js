@@ -4,6 +4,9 @@ var router = express.Router();
 /* GET informações do dia dos namorados. */
 router.get('/', function(req, res, next) {
 
+  // Se tivesse que configurar CORS somente para este endpoint:
+  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+
   // Versão final da tarefa:
   // const data = new Date("2025-06-12");
 

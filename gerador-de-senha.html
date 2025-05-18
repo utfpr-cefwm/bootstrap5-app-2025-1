@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cronômetro</title>
+    <title>Gerador de Senha</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -12,7 +12,7 @@
 
     <meta property="og:title" content="Homepage do meu projeto com BS5" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://localhost:8080/cronometro.html" />
+    <meta property="og:url" content="http://localhost:8080/gerador-de-senha.html" />
     <meta property="og:image" content="/icon.png" />
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -42,13 +42,13 @@
                 <a class="nav-link" href="contador.html">Contador</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Cronômetro</a>
+                <a class="nav-link" href="cronometro.html">Cronômetro</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="to-do-list.html">To-Do List</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="gerador-de-senha.html">Gerador de Senha</a>
+                <a class="nav-link active" aria-current="page" href="#">Gerador de Senha</a>
               </li>
             </ul>
           </div>
@@ -60,30 +60,31 @@
         <div class="p-5 mb-4 bg-light rounded-3">
           <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">
-              Cronômetro
+              Gerador de Senha
             </h1>
             <p class="col-md-8 mx-auto fs-4">
-              Utilize os botões abaixo para controlar o cronômetro.
+              Selecione as opções para gerar uma senha aleatória.
             </p>
           </div>
         </div>
 
-        <div class="d-flex flex-column d-sm-inline-block mx-sm-auto">
-          <button id="botao-iniciar" class="btn btn-success" type="button">
-            <i class="bi bi-play-circle-fill"></i>
-            Iniciar
-          </button>
-          <button id="botao-pausar" class="btn btn-warning" type="button">
-            <i class="bi bi-pause-circle-fill"></i>
-            Pausar
-          </button>
-          <button id="botao-reiniciar" class="btn btn-danger" type="button">
-            <i class="bi bi-stop-circle-fill"></i>
-            Reiniciar
-          </button>
-          <output class="d-block display-1 fw-bold py-5">
-            0
-          </output>
+        <div
+          id="tarefas"
+          class="container"
+          style="max-width: 40em;"
+        >
+          <div class="row">
+            <div class="col">
+              <button
+                id="botao-adicionar"
+                type="button"
+                class="btn btn-success"
+              >
+                <i class="bi bi-plus-circle-fill"></i>
+                Adicionar
+              </button>
+            </div>
+          </div>
         </div>
 
       </main>
@@ -94,7 +95,7 @@
     </div>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="js/cronometro.js"></script>
+    <script src="js/gerador-de-senha.js"></script>
 
   </body>
 
